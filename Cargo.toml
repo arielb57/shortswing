@@ -1,0 +1,29 @@
+[package]
+name = "shortswing"
+version = "0.1.0"
+edition = "2021"
+description = "Largest Section 16(b) short-swing profit from insider trades, with an optimality certificate"
+license = "MIT"
+readme = "README.md"
+keywords = ["section-16b", "min-cost-flow", "transportation-problem", "compliance"]
+categories = ["algorithms", "finance", "command-line-utilities"]
+
+[lib]
+name = "shortswing"
+path = "src/lib.rs"
+
+[[bin]]
+name = "shortswing"
+path = "src/main.rs"
+
+[[example]]
+name = "bench"
+path = "examples/bench.rs"
+
+[dependencies]
+
+[dev-dependencies]
+proptest = "1"
+
+[profile.test]
+opt-level = 2
